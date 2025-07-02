@@ -4,8 +4,8 @@ const { Client } = require('pg');
 const client = new Client({
     host: 'dpg-d1ibtabipnbc73bfp1m0-a.oregon-postgres.render.com', // Reemplaza con el host de Render
     port: 5432, // Reemplaza con el puerto de Render (usualmente 5432)
-    database: 'fbd_fashion', // Reemplaza con el nombre de tu base de datos
-    user: 'fashionhub_user', // Reemplaza con el usuario de Render
+    database: 'bd_fashion', // Reemplaza con el nombre de tu base de datos
+    user: 'bd_fashion_user', // Reemplaza con el usuario de Render
     password: 'WNB9OdqFI1CsSwGLFVbbYgwJWSNTVHL4', // Reemplaza con la contraseña de Render
     ssl: {
         require: true,

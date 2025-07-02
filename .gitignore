@@ -1,0 +1,32 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn.lock
+package-lock.json
+
+# Archivos de entorno
+.env
+
+# Archivos generados
+dist/
+build/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de editores
+.vscode/
+.idea/
+
+# Archivos de logs
+logs/
+*.log
+
+# Archivos de caché
+*.cache
+
+# Archivos temporales
+*.tmp
+*.swp
