@@ -1,4 +1,4 @@
-const { Sequelize } = require('sequelize');
+<const { Sequelize } = require('sequelize');
 
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
     dialect: 'postgres',
@@ -24,4 +24,4 @@ async function testConnection() {
 // Ejecutar la prueba de conexión
 testConnection();
 
-module.exports = sequelize;
+module.exports = sequelize;>
