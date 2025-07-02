@@ -1,24 +1,12 @@
 const express = require('express');
-const { Sequelize } = require('sequelize');
 const path = require('path');
 const authRoutes = require('./src/routes/auth');
 const productRoutes = require('./src/routes/products');
 const orderRoutes = require('./src/routes/orders');
+const client = require('./src/config/database');
 
 const app = express();
 const port = process.env.PORT || 3000;
-
-// Configuración de Sequelize (conexión a PostgreSQL en Render)
-const sequelize = new Sequelize(process.env.DATABASE_URL, {
-    dialect: 'postgres',
-    protocol: 'postgres',
-    dialectOptions: {
-        ssl: {
-            require: true,
-            rejectUnauthorized: false
-        }
-    }
-});
 
 // Middleware
 app.use(express.json());
@@ -40,11 +28,5 @@ app.get('/', (req, res) => {
 // Iniciar servidor
 app.listen(port, async () => {
     console.log(`Servidor corriendo en http://localhost:${port}`);
-    try {
-        await sequelize.authenticate();
-        console.log('Conexión a PostgreSQL exitosa');
-        await sequelize.sync();
-    } catch (error) {
-        console.error('Error al conectar a la base de datos:', error);
-    }
+    // La conexión a la base de datos se maneja en los controladores
 });
